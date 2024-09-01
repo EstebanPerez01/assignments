@@ -1,26 +1,34 @@
 # Lab 2 Quadratic Equation 
 
 ```python
+#prompts users for inputs
 a = float(input("value for a: "))
 b = float(input("value for b: "))
 c = float(input("value for c: "))
 
+#function to solve quadratic equation
 def solveQuadratic(a, b, c):
     discriminant = b**2 - 4*a*c
 
+    # If discriminant is positive we have 2 real roots
     if discriminant > 0:
         root1 = (-b + discriminant ** 0.5) / (2 * a)
         root2 = (-b - discriminant ** 0.5) / (2 * a)
         return f"{root1} and {root2}"
+
+    # if discriminant is zero we have 1 real root  
     elif discriminant == 0:
         root = -b / (2 * a)
         return f"{root}"
+    # if discriminant is negative we have two complex roots
     else:
         real = -b / (2 * a)
         imaginary = (-discriminant) ** 0.5 / (2 * a)
         return f"{real} + {imaginary}i and {real} - {imaginary}i"
 
+#calls function to solve equation
 result = solveQuadratic(a, b, c)
+
 print(result)
 ``` 
 ## Graph and Explanation 
