@@ -5,9 +5,9 @@ with open('story.txt', 'r') as file:
 
 #count and breaks down characters/words
 import re
-words = re.findall(r'\w+', text)  # Matches words
+words = re.findall(r'\w+', text)  
 numWords = len(words)
-numChars = len(text)  # Counts all characters
+numChars = len(text)  
 
 print(f"Number of words: {numWords}")
 print(f"Number of characters: {numChars}")
@@ -36,7 +36,6 @@ plt.title('Word Frequency Histogram (List Structure)')
 plt.show()
 
 # Word frequency using dictionary data structure (above as word_freq)
-
 print("Word Frequency using Dictionary:")
 for word, count in wordFreq.items():
     print(f"{word}: {count}")
