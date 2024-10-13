@@ -118,6 +118,9 @@ def guessNumberOrCharacter(low=1, high=100):
 
         print("The information you provided is inconsistent.")
 
+    else:
+        print("Invalid choice! Please enter 'n' for number or 'c' for character.")
+        return 
 # Call the function
 guessNumberOrCharacter()
 
